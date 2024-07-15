@@ -1,23 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Send Request</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-<h1>Send Request</h1>
-<form action="/send-request" method="POST">
-    <label for="url">URL:</label>
-    <input type="text" id="url" name="url" required>
-    <label for="method">Method:</label>
-    <select id="method" name="method">
-        <option value="GET">GET</option>
-        <option value="POST">POST</option>
-    </select>
-    <label for="body">Body:</label>
-    <textarea id="body" name="body"></textarea>
-    <button type="submit">Send Request</button>
-</form>
-</body>
-</html>
+<%- include('partials/header', { title: 'Home Page' }) %>
+
+<div class="container-fluid">
+    <form action="/send-request" method="POST">
+        <div class="form-group">
+            <label for="url">Request URL:</label>
+            <input type="text" name="url" class="form-control" id="url" placeholder="Enter Request URL">
+        </div>
+        <div class="form-group">
+            <label for="method">Request Type:</label>
+            <select name="method" class="form-control" id="method">
+                <option value="GET">GET</option>
+                <option value="POST">POST</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="body">Request Body:</label>
+            <textarea class="form-control" id="body" name="body" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="headers">Request URL:</label>
+            <textarea class="form-control" id="headers" name="headers" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<%- include('partials/footer') %>
