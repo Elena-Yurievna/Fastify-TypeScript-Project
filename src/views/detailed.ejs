@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Details</title>
+    <link rel="stylesheet" href="/public/style.css">
+</head>
+<body>
+<h1>Log Details</h1>
+<% if (log) { %>
+    <p><strong>ID:</strong> <%= log.id %></p>
+    <p><strong>Timestamp:</strong> <%= log.timestamp %></p>
+    <p><strong>URL:</strong> <%= log.url %></p>
+    <p><strong>Method:</strong> <%= log.method %></p>
+    <p><strong>Request Body:</strong> <pre><%= log.body %></pre></p>
+    <p><strong>Status:</strong> <%= log.status %></p>
+    <p><strong>Response:</strong> <pre><%= log.response %></pre></p>
+    <p><strong>Request Headers:</strong> <pre><%= log.requestHeaders %></pre></p>
+    <p><strong>Response Headers:</strong> <pre><%= log.responseHeaders %></pre></p>
+<% } else { %>
+    <p>Log not found</p>
+<% } %>
+</body>
+</html>

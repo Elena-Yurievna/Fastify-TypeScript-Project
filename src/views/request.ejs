@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Send Request</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<h1>Send Request</h1>
+<form action="/send-request" method="POST">
+    <label for="url">URL:</label>
+    <input type="text" id="url" name="url" required>
+    <label for="method">Method:</label>
+    <select id="method" name="method">
+        <option value="GET">GET</option>
+        <option value="POST">POST</option>
+    </select>
+    <label for="body">Body:</label>
+    <textarea id="body" name="body"></textarea>
+    <button type="submit">Send Request</button>
+</form>
+</body>
+</html>
